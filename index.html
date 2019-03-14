@@ -1,291 +1,535 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Ristorante Con Fusion</title>
-    <!-- Required meta tags always come first -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <!-- Bootstrap CSS -->
-     <!-- build:css css/main.css -->
-     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-     <link href="css/styles.css" rel="stylesheet">
-     <!-- endbuild -->
-    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A little gallery of indoor ornamental plants</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rakkas">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <!-- build:css css/main.css -->
+  <link rel="stylesheet" href="node_modules/pagepiling.js/dist/jquery.pagepiling.css"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <!-- endbuild -->
+
 </head>
 <body>
-    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41"></a> 
-            <div class="collapse navbar-collapse" id="Navbar">
-                <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
-                </ul>
-                <span class="navbar-text">
-                        <a id="login">
-                        <span class="fa fa-sign-in"></span> Login</a>
-                </span>                
-            </div>
-        </div>
-    </nav>
 
-    <div id="loginModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Login </h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-sm-4">
-                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
-                            </div>
-                            <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputPassword3">Password</label>
-                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
-                            </div>
-                            <div class="col-sm-auto">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label"> Remember me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>    
-    <div id="reserve" name="reserve" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-lg"  role="document">            
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title">Reserve a Table</h3>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                    </button>                            
-                </div>    
-                <div class="modal-body">
-                    <div class="form-group row">
-                        <label for="guests" class="col-md-2 col-form-label">Number of Guests</label>
-                        <div class="col-md-10">
-                            <label class="mr-2"><input type="radio" name="optradio" checked> 1</label>
-                            <label class="mr-2"><input type="radio" name="optradio"> 2</label>
-                            <label class="mr-2"><input type="radio" name="optradio"> 3</label>
-                            <label class="mr-2"><input type="radio" name="optradio"> 4</label>
-                            <label class="mr-2"><input type="radio" name="optradio"> 5</label>
-                            <label class="mr-2"><input type="radio" name="optradio"> 6</label>
-                        </div>
-                    </div>   
-                    <div class="form-group row">
-                        <label for="sections" class="col-md-2 col-form-label">Section</label>
-                        <div  class="btn-group btn-group-toggle col-md-5" data-toggle="buttons" role="group" id="sections" >
-                            <button type="radio" checked autocomplete="off" class="btn btn-success bg-success active">Non-Smoking</button>
-                            <button type="radio"  autocomplete="off" class="btn btn-danger bg-danger">Smoking</button>                                    
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="date" class="col-12 col-md-2 col-form-label">Date and Time</label>
-                        <div class="col-6 col-md-5">
-                            <input type="date" class="form-control" id="date" name="date" placeholder="Date">
-                        </div>
-                        <div class="col-6 col-md-5">
-                            <input type="time" class="form-control" id="time" name="time" placeholder="Time">
-                        </div>
-                    </div> 
+  <!-- Primary navigation relies on Bootstrap modals, as content in About and Contact is minimal -->
+  <ul class="nav justify-content-end">
+    <li class="nav-item">
+      <!-- Home is an inactive link -->
+      <a href="#" class="nav-link text-dark" >Home</a>
+    </li>
+    <li class="nav-item">
+      <!-- About calls the About modal upon click -->
+        <a href="#" data-toggle="modal" data-target="#aboutModal" class="nav-link text-dark">About</a>
+    </li>
+    <li class="nav-item">
+      <!-- Contact calls the Contact modal upon click -->
+      <a href="#" data-toggle="modal" data-target="#contactModal" class="nav-link text-dark">Contact</a>
+    </li>
+  </ul>
 
-                </div>
-                <div class="modal-footer">
-                    <div class="form-group row float-right">
-                        <div class="col-auto" >
-                            <button data-dismiss="modal"   class="btn btn-primary bg-danger">Cancel</button>
-                        </div>                                                    
-                        <div class="col-auto" >
-                            <button type="submit" class="btn btn-primary">Reserve</button>
-                        </div>   
-                    </div>
-                </div>                
-            </div>
+  <!-- About modal -->
+  <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <h4 class="modal-title" id="aboutModalLabel">About us</h4> 
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-    </div>            
-    <header class="jumbotron">
-        <div class="container">
-                <div class="row row-content">
-                    <div class="col">
-                        <div id="mycarousel" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner" role="listbox">
-                                    <div class="carousel-item active">
-                                        <img class="d-block img-fluid"
-                                            src="img/uthappizza.png" alt="Uthappizza">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h2>Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-default">$4.99</span></h2>
-                                            . . .
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                            . . .
-                                    </div>
-                                    <div class="carousel-item">
-                                            . . .
-                                    </div>
-                                    <ol class="carousel-indicators">
-                                            <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-                                            <li data-target="#mycarousel" data-slide-to="1"></li>
-                                            <li data-target="#mycarousel" data-slide-to="2"></li>
-                                        </ol>
-                                </div>
-                                <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
-                                        <span class="carousel-control-prev-icon"></span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
-                                        <span class="carousel-control-next-icon"></span>
-                                </a>
-                                <button class="btn btn-danger btn-sm" id="carouselButton">
-                                    <span id="carousel-button-icon" class="fa fa-pause"></span>
-                                </button>
-                            </div>
-                    </div>
-                </div>            
-            <div class="row row-header">
-                <div class="col-12 col-sm-6">
-                    <h1>Ristorante con Fusion</h1>
-                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
-                </div>
-                <div class="col-12 col-sm align-self-center">
-                    <img src="img/logo.png" class="img-fluid">
-                </div>
-                <div class="col-12 col-sm-3 align-self-center justify-content-center mt-10 pt-5 pt-md-0">
-                    <a id="btn-reserve" role="button" class="btn btn-warning padding-x-md btn-block btn-sm">
-                    Reserve Table
-                    </a>                    
-            </div>                 
-            </div>
+        <div class="modal-body">
+          <div class="text-center">
+            <img src="img/daisy.jpg" alt="Daisy">
+          </div>
+          <blockquote class="blockquote mt-3">
+            <p class="text-justify">A garden is a grand teacher. It teaches patience and careful watchfulness; it teaches industry and thrift;
+              above all it teaches entire trust.</p>
+            <footer class="blockquote-footer">Gertrude Jekyll</footer>
+          </blockquote>
         </div>
-    </header>
-
-    <div class="container">
-        <div class="row row-content align-items-center">
-            <div clasS="col-12 col-sm-4 order.sm-last col-md-3">
-                <h3>Our Lipsmacking Culinary Creations</h3>
-            </div>
-            <div class="media">
-                <img class="d-flex mr-3 img-thumbnail align-self-center"
-                        src="img/uthappizza.png" alt="Uthappizza">
-                <div class="media-body">
-                    <h2 class="mt-0">Uthappizza<span class="badge badge-danger">HOT</span><span class="badge badge-pill badge-secondary">$4.99</span></h2>
-                    <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
-                        Italian pizza, topped with Cerignola olives, ripe vine
-                        cherry tomatoes, Vidalia onion, Guntur chillies and
-                        Buffalo Paneer.</p>
-                </div>
-            </div>
+        <div class="modal-footer d-flex justify-content-center bg-light">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
         </div>
-
-
-        <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 col-md-3">
-                <h3>This Month's Promotions</h3>
-            </div>
-            <div class="col col-sm col-md"> 
-                <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center order-sm-last"
-                        src="img/buffet.png" alt="Buffet">
-                    <div class="media-body">
-                        <h2>Weekend Grand Buffet<span class="badge badge-danger ml-sm-1">NEW</span></h2>
-                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Meet our Culinary Specialists</h3>
-            </div>
-            <div class="col col-sm order-sm-first col-md">
-                <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center"
-                            src="img/alberto.png" alt="Alberto Somayya">
-                    <div class="media-body">
-                        <h2 class="mt-0">Alberto Somayya</h2>
-                        <h4>Executive Chef</h4>
-                        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide
-                            International experience having worked closely with
-                            whos-who in the culinary world, he specializes in
-                            creating mouthwatering Indo-Italian fusion experiences.
-                            </p>
-                    </div>
-                </div>
-            </div>
-        </div>  
+      </div>
     </div>
-    </div>     
+  </div>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row">             
-                <div clasS="col-4 offset-1 col-sm-2">
-                    <h5>Links</h5>
-                    <ul class="listed-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-7 col-sm-5">
-                    <h5>Our Address</h5>
-                    <address>
-		              121, Clear Water Bay Road<br>
-		              Clear Water Bay, Kowloon<br>
-		              HONG KONG<br>
-		              Tel.: +852 1234 5678<br>
-		              Fax: +852 8765 4321<br>
-		              Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
-		           </address>
-                </div>
-                <div class="col-12 col-sm-4 align-self-center">
-                    <div class="text-center">
-                        <a href="http://google.com/+">Google+</a>
-                        <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
-                        <a href="http://www.linkedin.com/in/">LinkedIn</a>
-                        <a href="http://twitter.com/">Twitter</a>
-                        <a href="http://youtube.com/">YouTube</a>
-                        <a href="mailto:">Mail</a>
-                    </div>
-                </div>
-           </div>
-           <div class="row justify-content-center">             
-                <div class="col-auto">
-                    <p>© Copyright 2018 Ristorante Con Fusion</p>
-                </div>
-           </div>
+  <!-- Contact modal including a form -->
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <h4 class="modal-title" id="contactModalLabel">Drop us a line!</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-    </footer>
-   <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-   <!-- build:js js/main.js -->
-   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-   <script src="js/scripts.js"></script>
-   <!-- endbuild -->
+        <div class="modal-body">
+          <div class="md-form mb-5 row">
+            <div class="col-2 pr-0">
+              <i class="fas fa-user fa-2x text-secondary"></i>
+            </div>
+            <div class="col-10 pl-0">
+              <input type="text" id="name" class="form-control validate" placeholder="Your name">
+            </div>
+          </div>
+          <div class="md-form mb-5 row">
+            <div class="col-2 pr-0">
+              <i class="fas fa-envelope fa-2x text-secondary"></i>
+            </div>
+            <div class="col-10 pl-0">
+              <input type="email" id="email" class="form-control validate" placeholder="Your email">
+            </div>
+          </div>
+          <div class="md-form mb-5 row">
+            <div class="col-2 pr-0">
+              <i class="fas fa-tag fa-2x text-secondary"></i>
+            </div>
+            <div class="col-10 pl-0">
+              <input type="text" id="subject" class="form-control validate" placeholder="Subject">
+            </div>
+          </div>
+          <div class="md-form row">
+            <div class="col-2 pr-0">
+              <i class="fas fa-pen fa-2x text-secondary"></i>
+            </div>
+            <div class="col-10 pl-0">
+              <textarea type="text" id="message" class="md-textarea form-control" rows="4" placeholder="Your message"></textarea>
+            </div>
+          </div>
+          <p class="text-danger mb-0 mt-3">This form does not actually send any message.</p>
+        </div>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-success">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Here start the 10 sections or "slides", the main content -->
+  <!-- Section 1 -->
+  <div id="pagepiling">
+    <div class="section section1">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1 class="display-1 text-center">A little gallery<br>of<br>indoor ornamental plants</h1>
+            <p class="text-center float mt-5 pt-5">Please scroll</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section section2">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-center align-items-center">
+              <div class="d-inline-block mb-3 mb-md-0">
+                <h2 class="mb-md-4"><em class="display-4"><u>Anthurium scherzerianum</u></em></h2>
+                <div class="media">
+                  <h2><i class="fas fa-sun fa-2x"></i></h2>
+                  <div class="media-body">
+                    <h2 class="mb-md-4"><strong>Exposure:<br></strong>Bright light or part shade</h2>
+                  </div>
+                </div>
+                <div class="media">
+                  <h2><i class="fas fa-thermometer-half fa-2x"></i></h2>
+                  <div class="media-body">
+                    <h2 class="mb-md-4"><strong>Temperature:<br></strong>Between 18°C and 22°C</h2>
+                  </div>
+                </div>
+                <div class="media">
+                  <h2><i class="fas fa-tint fa-2x"></i></h2>
+                  <div class="media-body">
+                    <h2 class="mb-md-4"><strong>Watering:<br></strong>2-3 times a week in summer, 1-2 times a week in winter</h2>
+                  </div>
+                </div>
+                <div class="media">
+                  <h2><i class="fas fa-mountain fa-2x"></i></h2>
+                  <div class="media-body">
+                    <h2 class="mb-md-4"><strong>Soil:<br></strong>Peat-enriched loam</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-center align-items-center">
+              <img class="img-fluid" src="img/anthurium.jpg" alt="Anthurium scherzerianum">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section section3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-end align-items-center">
+              <img class="img-fluid" src="img/alocasia.jpg" alt="Alocasia amazonica">
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-center align-items-center pr-5">
+              <div class="d-inline-block mt-3 mt-md-0">
+                <h2 class="mb-md-4"><em class="display-4"><u>Alocasia amazonica</u></em></h2>
+                <div class="media">
+                  <h2><i class="fas fa-sun fa-2x"></i></h2>
+                  <div class="media-body">
+                    <h2 class="mb-md-4"><strong>Exposure:<br></strong>Bright light</h2>
+                  </div>
+                </div>
+                <div class="media">
+                  <h2><i class="fas fa-thermometer-half fa-2x"></i></h2>
+                  <div class="media-body">
+                    <h2 class="mb-md-4"><strong>Temperature:<br></strong>Between 18°C and 25°C</h2>
+                  </div>
+                </div>
+                <div class="media">
+                  <h2><i class="fas fa-tint fa-2x"></i></h2>
+                  <div class="media-body">
+                    <h2 class="mb-md-4"><strong>Watering:<br></strong>2 times a week in summer, every 10 days in winter</h2>
+                  </div>
+                </div>
+                <div class="media">
+                  <h2><i class="fas fa-mountain fa-2x"></i></h2>
+                  <div class="media-body">
+                    <h2 class="mb-md-4"><strong>Soil:<br></strong>Well-drained, sand-enriched loam</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section section4">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-center align-items-center">
+              <div class="d-inline-block mb-3 mb-md-0">
+                <h2 class="mb-md-4"><em class="display-4"><u>Begonia rex</u></em></h2>
+                <div class="media">
+                  <h2><i class="fas fa-sun fa-2x"></i></h2>
+                  <div class="media-body">
+                    <h2 class="mb-md-4"><strong>Exposure:<br></strong>Bright light or part shade</h2>
+                  </div>
+                </div>
+                <div class="media">
+                  <h2><i class="fas fa-thermometer-half fa-2x"></i></h2>
+                  <div class="media-body">
+                    <h2 class="mb-md-4"><strong>Temperature:<br></strong>Between 15°C and 22°C</em></h2>
+                  </div>
+                </div>
+                <div class="media">
+                  <h2><i class="fas fa-tint fa-2x"></i></h2>
+                  <div class="media-body">
+                    <h2 class="mb-md-4"><strong>Watering:<br></strong>1-2 times a week</h2>
+                  </div>
+                </div>
+                <div class="media">
+                  <h2><i class="fas fa-mountain fa-2x"></i></h2>
+                  <div class="media-body">
+                    <h2 class="mb-md-4"><strong>Soil:<br></strong>Ordinary</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-start align-items-center">
+              <img class="img-fluid" src="img/begonia.jpg" alt="Begonia rex">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section section5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-end align-items-center">
+              <img class="img-fluid" src="img/hibiscus.jpg" alt="Hibiscus rosa-sinensis">
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-center align-items-center pr-5">
+              <div class="d-inline-block mt-3 mt-md-0">
+                <h2 class="mb-md-4"><em class="display-4"><u>Hibiscus rosa-sinensis</u></em></h2>
+                <div class="media">
+                  <h2><i class="fas fa-sun fa-2x"></i></h2>
+                  <div class="media-body">
+                    <h2 class="mb-md-4"><strong>Exposure:<br></strong>Bright light</h2>
+                  </div>
+                </div>
+                <div class="media">
+                  <h2><i class="fas fa-thermometer-half fa-2x"></i></h2>
+                  <div class="media-body">
+                    <h2 class="mb-md-4"><strong>Temperature:<br></strong>Between 18°C and 25°C</h2>
+                  </div>
+                </div>
+                <div class="media">
+                  <h2><i class="fas fa-tint fa-2x"></i></h2>
+                  <div class="media-body">
+                    <h2 class="mb-md-4"><strong>Watering:<br></strong>2-3 times a week in summer, 1-2 times a week in winter</h2>
+                  </div>
+                </div>
+                <div class="media">
+                  <h2><i class="fas fa-mountain fa-2x"></i></h2>
+                  <div class="media-body">
+                    <h2 class="mb-md-4"><strong>Soil:<br></strong>Well-drained, sandy loam</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section section6">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-center align-items-center">
+              <div class="d-inline-block mb-3 mb-md-0">
+                <h2 class="mb-md-4"><em class="display-4"><u>Chlorophytum comosum</u></em></h2>
+                <div class="media">
+                    <h2><i class="fas fa-sun fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Exposure:<br></strong>Very well-lit</h2>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <h2><i class="fas fa-thermometer-half fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Temperature:<br></strong>Between 10°C and 22°C</h2>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <h2><i class="fas fa-tint fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Watering:<br></strong>2 times a week in summer, every 10 days in winter</h2>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <h2><i class="fas fa-mountain fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Soil:<br></strong>Ordinary</h2>
+                    </div>
+                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-start align-items-center">
+              <img class="img-fluid" src="img/chlorophytum.jpg" alt="Chlorophytum comosum">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section section7">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-end align-items-center">
+              <img class="img-fluid" src="img/saintpaulia.jpg" alt="Saintpaulia">
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-center align-items-center pr-5">
+              <div class="d-inline-block mt-3 mt-md-0">
+                <h2 class="mb-md-4"><em class="display-4"><u>Saintpaulia</u></em></h2>
+                <div class="media">
+                    <h2><i class="fas fa-sun fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Exposure:<br></strong>Light shade</h2>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <h2><i class="fas fa-thermometer-half fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Temperature:<br></strong>Between 15°C and 22°C</h2>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <h2><i class="fas fa-tint fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Watering:<br></strong>Once a week</h2>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <h2><i class="fas fa-mountain fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Soil:<br></strong>Well-drained mixture of loam and compost</h2>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="section section8">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-center align-items-center">
+              <div class="d-inline-block mb-3 mb-md-0">
+                <h2 class="mb-md-4"><em class="display-4"><u>Plectranthus scutellarioides</u></em></h2>
+                <div class="media">
+                    <h2><i class="fas fa-sun fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Exposure:<br></strong>Bright light or part shade</h2>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <h2><i class="fas fa-thermometer-half fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Temperature:<br></strong>Between 18°C and 25°C</h2>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <h2><i class="fas fa-tint fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Watering:<br></strong>2-3 times a week in summer, 1-2 times a week in winter</h2>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <h2><i class="fas fa-mountain fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Soil:<br></strong>Rich in organic matter</h2>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-start align-items-center">
+              <img class="img-fluid" src="img/plectranthus.jpg" alt="Plectranthus scutellarioides">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="section section9">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-end align-items-center">
+              <img class="img-fluid" src="img/codiaeum.jpg" alt="Codiaeum variegatum">
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-center align-items-center pr-5">
+              <div class="d-inline-block mt-3 mt-md-0">
+                <h2 class="mb-md-4"><em class="display-4"><u>Codiaeum variegatum</u></em></h2>
+                <div class="media">
+                    <h2><i class="fas fa-sun fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Exposure:<br></strong>Bright light or part shade</h2>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <h2><i class="fas fa-thermometer-half fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Temperature:<br></strong>Between 16°C and 22°C</h2>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <h2><i class="fas fa-tint fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Watering:<br></strong>1-2 times a week</h2>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <h2><i class="fas fa-mountain fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Soil:<br></strong>Ordinary</h2>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 10 -->
+    <div class="section section10">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-center align-items-center">
+              <div class="d-inline-block mb-3 mb-md-0">
+                <h2 class="mb-md-4"><em class="display-4"><u>Chamaecereus silvestrii</u></em></h2>
+                <div class="media">
+                    <h2><i class="fas fa-sun fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Exposure:<br></strong>Direct sunlight</h2>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <h2><i class="fas fa-thermometer-half fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Temperature:<br></strong>Between 18°C and 25°C in summer, between 2°C and 10°C in winter</h2>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <h2><i class="fas fa-tint fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Watering:<br></strong>Once every 2 weeks in summer, no water in winter</h2>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <h2><i class="fas fa-mountain fa-2x"></i></h2>
+                    <div class="media-body">
+                      <h2 class="mb-md-4"><strong>Soil:<br></strong>Well-drained, sandy soil</h2>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="h-100 d-flex justify-content-start align-items-center">
+              <img class="img-fluid" src="img/chamaecereus.jpg" alt="Chamaecereus silvestrii">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- build:js js/main.js -->
+  <script src="node_modules/pagepiling.js/dist/jquery.pagepiling.js"></script>
+  <script src="js/scripts.js"></script>
+  <!-- endbuild -->
+
 </body>
 </html>
