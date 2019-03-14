@@ -1,0 +1,127 @@
+/***************************************************************/
+/*       Definition of the background color of the slides      */
+/***************************************************************/
+/***************************************************************/
+/*                  Definition of text colors                  */
+/***************************************************************/
+/***************************************************************/
+/*                            Fonts                            */
+/***************************************************************/
+body {
+  font-family: 'Rakkas', cursive; }
+
+/***************************************************************/
+/*                           Headers                           */
+/***************************************************************/
+h2 i {
+  min-width: 120px;
+  text-align: center; }
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1em; }
+  .display-1 {
+    font-size: 3em; }
+  .display-4 {
+    font-size: 2em; } }
+
+/***************************************************************/
+/*                            Images                           */
+/***************************************************************/
+img {
+  width: 80%; }
+  @media (max-width: 768px) {
+    img {
+      width: 100%; } }
+
+/***************************************************************/
+/*                          Animations                         */
+/***************************************************************/
+@keyframes float {
+  0% {
+    transform: translatey(0px); }
+  50% {
+    transform: translatey(-20px); }
+  100% {
+    transform: translatey(0px); } }
+
+.float {
+  transform: translatey(0px);
+  animation: float 4s ease-in-out infinite; }
+
+/***************************************************************/
+/*                          Navigation                         */
+/***************************************************************/
+.nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0); }
+
+@media (max-width: 768px) {
+  #pp-nav {
+    display: none; } }
+
+/***************************************************************/
+/*                    Sections specification                   */
+/***************************************************************/
+.section1 {
+  background-color: #313f8b;
+  color: #f1f5ff; }
+  .section1 img {
+    border: 20px solid #f1f5ff; }
+
+.section2 {
+  background-color: #002838;
+  color: #FF5D4B; }
+  .section2 img {
+    border: 20px solid #FF5D4B; }
+
+.section3 {
+  background-color: #F5CDC7;
+  color: #4E00DC; }
+  .section3 img {
+    border: 20px solid #4E00DC; }
+
+.section4 {
+  background-color: #4698A8;
+  color: #FAAD00; }
+  .section4 img {
+    border: 20px solid #FAAD00; }
+
+.section5 {
+  background-color: #3E43A4;
+  color: #FF8C5C; }
+  .section5 img {
+    border: 20px solid #FF8C5C; }
+
+.section6 {
+  background-color: #146755;
+  color: #FDC7F3; }
+  .section6 img {
+    border: 20px solid #FDC7F3; }
+
+.section7 {
+  background-color: #464966;
+  color: #D0776D; }
+  .section7 img {
+    border: 20px solid #D0776D; }
+
+.section8 {
+  background-color: #FFCE9B;
+  color: #007720; }
+  .section8 img {
+    border: 20px solid #007720; }
+
+.section9 {
+  background-color: #008894;
+  color: #00343A; }
+  .section9 img {
+    border: 20px solid #00343A; }
+
+.section10 {
+  background-color: #F2F2F2;
+  color: #FF0000; }
+  .section10 img {
+    border: 20px solid #FF0000; }
