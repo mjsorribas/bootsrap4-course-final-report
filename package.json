@@ -62,6 +62,7 @@
   },
   "dependencies": {
     "gulp": "^4.0.0",
+    "modernizr": "^3.7.1",
     "pagepiling.js": "^1.5.6"
   }
 }
