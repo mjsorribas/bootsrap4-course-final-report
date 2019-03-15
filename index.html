@@ -1,535 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A little gallery of indoor ornamental plants</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Project Lawer Studio</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet"/>
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
-  <!-- build:css css/main.css -->
-  <link rel="stylesheet" href="node_modules/pagepiling.js/dist/jquery.pagepiling.css"/>
-  <link rel="stylesheet" href="css/styles.css"/>
-  <!-- endbuild -->
-
+    <!--     Fonts and icons     -->
+    <link href='https://fonts.googleapis.com/css?family=Cambo|Poppins:400,600' rel='stylesheet' type='text/css'>
+    <link href="node_modules/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Primary navigation relies on Bootstrap modals, as content in About and Contact is minimal -->
-  <ul class="nav justify-content-end">
-    <li class="nav-item">
-      <!-- Home is an inactive link -->
-      <a href="#" class="nav-link text-dark" >Home</a>
-    </li>
-    <li class="nav-item">
-      <!-- About calls the About modal upon click -->
-        <a href="#" data-toggle="modal" data-target="#aboutModal" class="nav-link text-dark">About</a>
-    </li>
-    <li class="nav-item">
-      <!-- Contact calls the Contact modal upon click -->
-      <a href="#" data-toggle="modal" data-target="#contactModal" class="nav-link text-dark">Contact</a>
-    </li>
-  </ul>
-
-  <!-- About modal -->
-  <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header bg-light">
-          <h4 class="modal-title" id="aboutModalLabel">About us</h4> 
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+    <div id="callus" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Contact us</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Please Call at 45678-1234</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            </div>
         </div>
-        <div class="modal-body">
-          <div class="text-center">
-            <img src="img/daisy.jpg" alt="Daisy">
-          </div>
-          <blockquote class="blockquote mt-3">
-            <p class="text-justify">A garden is a grand teacher. It teaches patience and careful watchfulness; it teaches industry and thrift;
-              above all it teaches entire trust.</p>
-            <footer class="blockquote-footer">Gertrude Jekyll</footer>
-          </blockquote>
+    </div>    
+    <div class="section">
+        <div class="container ">
+            <div class="content centered">
+                <div class="title-area">
+                    <h1 class="title-modern">Law Studio</h1>
+                    <h3>Change is in the air for the legal industry as a whole</h2>
+                    <div class="separator line-separator">♦</div>
+                    <h3>We observed and critically analyzed the shift in the legal landscape and decided it was time to introduce a different law firm model, one that satisfies the needs of the legal professionals and their clients.</h3>
+                </div>
+        </div>        
+        <div class="container">
+            <div class="row">
+                <div class="title-area">
+                    <h2>Our Services</h2>
+                    <div class="separator separator-danger">✻</div>
+                    <p class="description">At the Law Studio, we take a fresh approach to business law. Whether you’re an individual, a small-business owner or the president of a large corporation, we’ll work with you to understand your goals – short, medium and long-term – and collaborate as members of your team. Whatever your issues are, we’ll work hard to resolve them.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="info-icon">
+                        <div class="icon text-danger">
+                            <i class="pe-7s-graph1"></i>
+                        </div>
+                        <h3>Job</h3>
+                        <p class="description"> The Law Studio is a positive, collaborative environment within which we work hard to solve problems and design more innovative solutions for our clients.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-icon">
+                        <div class="icon text-danger">
+                            <i class="pe-7s-note2"></i>
+                        </div>
+                        <h3>Think</h3>
+                        <p class="description">Honesty. 
+                            Integrity. 
+                            Transparency. 
+                            Objective advice. 
+                            Reliability. 
+                            Creativity.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-icon">
+                        <div class="icon text-danger">
+                            <i class="pe-7s-music"></i>
+                        </div>
+                        <h3>Ideas</h3>
+                        <p class="description">Law Studio makes you feel welcome and valued as our client. It's a place where you can feel comfortable and confident that you're being looked after and getting the quality representation you need.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal-footer d-flex justify-content-center bg-light">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Contact modal including a form -->
-  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header bg-light">
-          <h4 class="modal-title" id="contactModalLabel">Drop us a line!</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="md-form mb-5 row">
-            <div class="col-2 pr-0">
-              <i class="fas fa-user fa-2x text-secondary"></i>
-            </div>
-            <div class="col-10 pl-0">
-              <input type="text" id="name" class="form-control validate" placeholder="Your name">
-            </div>
-          </div>
-          <div class="md-form mb-5 row">
-            <div class="col-2 pr-0">
-              <i class="fas fa-envelope fa-2x text-secondary"></i>
-            </div>
-            <div class="col-10 pl-0">
-              <input type="email" id="email" class="form-control validate" placeholder="Your email">
-            </div>
-          </div>
-          <div class="md-form mb-5 row">
-            <div class="col-2 pr-0">
-              <i class="fas fa-tag fa-2x text-secondary"></i>
-            </div>
-            <div class="col-10 pl-0">
-              <input type="text" id="subject" class="form-control validate" placeholder="Subject">
-            </div>
-          </div>
-          <div class="md-form row">
-            <div class="col-2 pr-0">
-              <i class="fas fa-pen fa-2x text-secondary"></i>
-            </div>
-            <div class="col-10 pl-0">
-              <textarea type="text" id="message" class="md-textarea form-control" rows="4" placeholder="Your message"></textarea>
-            </div>
-          </div>
-          <p class="text-danger mb-0 mt-3">This form does not actually send any message.</p>
-        </div>
-        <div class="modal-footer bg-light">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-success">Send</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Here start the 10 sections or "slides", the main content -->
-  <!-- Section 1 -->
-  <div id="pagepiling">
-    <div class="section section1">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <h1 class="display-1 text-center">A little gallery<br>of<br>indoor ornamental plants</h1>
-            <p class="text-center float mt-5 pt-5">Please scroll</p>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <!-- Section 2 -->
-    <div class="section section2">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="h-100 d-flex justify-content-center align-items-center">
-              <div class="d-inline-block mb-3 mb-md-0">
-                <h2 class="mb-md-4"><em class="display-4"><u>Anthurium scherzerianum</u></em></h2>
-                <div class="media">
-                  <h2><i class="fas fa-sun fa-2x"></i></h2>
-                  <div class="media-body">
-                    <h2 class="mb-md-4"><strong>Exposure:<br></strong>Bright light or part shade</h2>
-                  </div>
+
+    <div class="section section-our-team-freebie">
+        <div class="parallax filter filter-color-black">
+            <div class="container">
+                <div class="content">
+                    <div class="row">
+                        <div class="title-area">
+                            <h2>Who We Are</h2>
+                            <div class="separator separator-danger">✻</div>
+                            <p class="description">
+                                    Our firm is proactive about getting involved in our communities, through volunteer work and charitable contributions. We believe that giving back is the right thing to do.</p>
+                        </div>
+                    </div>
+
+                    <div class="team">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div class="avatar avatar-danger">
+                                                    <img alt="..." class="img-circle" src="img/faces/face_1.jpg"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Juana</h3>
+                                                    <p class="small-text">CEO / Co-Founder</p>
+                                                    <p class="description">
+                                                     ....</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div class="avatar avatar-danger">
+                                                    <img alt="..." class="img-circle" src="img/faces/face_4.jpg"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Carlos</h3>
+                                                    <p class="small-text">Product Designer</p>
+                                                    <p class="description">
+                                                            ....</p>                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card card-member">
+                                            <div class="content">
+                                                <div class="avatar avatar-danger">
+                                                    <img alt="..." class="img-circle" src="img/faces/face_3.jpg"/>
+                                                </div>
+                                                <div class="description">
+                                                    <h3 class="title">Carina</h3>
+                                                    <p class="small-text">Marketing Genius</p>
+                                                    <p class="description">
+                                                            ....</p>                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="media">
-                  <h2><i class="fas fa-thermometer-half fa-2x"></i></h2>
-                  <div class="media-body">
-                    <h2 class="mb-md-4"><strong>Temperature:<br></strong>Between 18°C and 22°C</h2>
-                  </div>
-                </div>
-                <div class="media">
-                  <h2><i class="fas fa-tint fa-2x"></i></h2>
-                  <div class="media-body">
-                    <h2 class="mb-md-4"><strong>Watering:<br></strong>2-3 times a week in summer, 1-2 times a week in winter</h2>
-                  </div>
-                </div>
-                <div class="media">
-                  <h2><i class="fas fa-mountain fa-2x"></i></h2>
-                  <div class="media-body">
-                    <h2 class="mb-md-4"><strong>Soil:<br></strong>Peat-enriched loam</h2>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="h-100 d-flex justify-content-center align-items-center">
-              <img class="img-fluid" src="img/anthurium.jpg" alt="Anthurium scherzerianum">
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
-    <!-- Section 3 -->
-    <div class="section section3">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="h-100 d-flex justify-content-end align-items-center">
-              <img class="img-fluid" src="img/alocasia.jpg" alt="Alocasia amazonica">
+    <div class="section section-small section-get-started">
+        <div class="parallax filter">
+            <div class="container">
+                <div class="title-area">
+                    <h2 class="text-white">Do you want to work with us?</h2>
+                    <div class="separator line-separator">♦</div>
+                    <p class="description"> We work hard to make the diference with our clients</p>
+                </div>
+
+                <div class="button-get-started">
+                    <button  data-toggle="modal" data-target="#callus" class="btn btn-danger btn-fill btn-lg">Contact Us</button>
+                </div>
             </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="h-100 d-flex justify-content-center align-items-center pr-5">
-              <div class="d-inline-block mt-3 mt-md-0">
-                <h2 class="mb-md-4"><em class="display-4"><u>Alocasia amazonica</u></em></h2>
-                <div class="media">
-                  <h2><i class="fas fa-sun fa-2x"></i></h2>
-                  <div class="media-body">
-                    <h2 class="mb-md-4"><strong>Exposure:<br></strong>Bright light</h2>
-                  </div>
-                </div>
-                <div class="media">
-                  <h2><i class="fas fa-thermometer-half fa-2x"></i></h2>
-                  <div class="media-body">
-                    <h2 class="mb-md-4"><strong>Temperature:<br></strong>Between 18°C and 25°C</h2>
-                  </div>
-                </div>
-                <div class="media">
-                  <h2><i class="fas fa-tint fa-2x"></i></h2>
-                  <div class="media-body">
-                    <h2 class="mb-md-4"><strong>Watering:<br></strong>2 times a week in summer, every 10 days in winter</h2>
-                  </div>
-                </div>
-                <div class="media">
-                  <h2><i class="fas fa-mountain fa-2x"></i></h2>
-                  <div class="media-body">
-                    <h2 class="mb-md-4"><strong>Soil:<br></strong>Well-drained, sand-enriched loam</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
-    <!-- Section 4 -->
-    <div class="section section4">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="h-100 d-flex justify-content-center align-items-center">
-              <div class="d-inline-block mb-3 mb-md-0">
-                <h2 class="mb-md-4"><em class="display-4"><u>Begonia rex</u></em></h2>
-                <div class="media">
-                  <h2><i class="fas fa-sun fa-2x"></i></h2>
-                  <div class="media-body">
-                    <h2 class="mb-md-4"><strong>Exposure:<br></strong>Bright light or part shade</h2>
-                  </div>
-                </div>
-                <div class="media">
-                  <h2><i class="fas fa-thermometer-half fa-2x"></i></h2>
-                  <div class="media-body">
-                    <h2 class="mb-md-4"><strong>Temperature:<br></strong>Between 15°C and 22°C</em></h2>
-                  </div>
-                </div>
-                <div class="media">
-                  <h2><i class="fas fa-tint fa-2x"></i></h2>
-                  <div class="media-body">
-                    <h2 class="mb-md-4"><strong>Watering:<br></strong>1-2 times a week</h2>
-                  </div>
-                </div>
-                <div class="media">
-                  <h2><i class="fas fa-mountain fa-2x"></i></h2>
-                  <div class="media-body">
-                    <h2 class="mb-md-4"><strong>Soil:<br></strong>Ordinary</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="h-100 d-flex justify-content-start align-items-center">
-              <img class="img-fluid" src="img/begonia.jpg" alt="Begonia rex">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Section 5 -->
-    <div class="section section5">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="h-100 d-flex justify-content-end align-items-center">
-              <img class="img-fluid" src="img/hibiscus.jpg" alt="Hibiscus rosa-sinensis">
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="h-100 d-flex justify-content-center align-items-center pr-5">
-              <div class="d-inline-block mt-3 mt-md-0">
-                <h2 class="mb-md-4"><em class="display-4"><u>Hibiscus rosa-sinensis</u></em></h2>
-                <div class="media">
-                  <h2><i class="fas fa-sun fa-2x"></i></h2>
-                  <div class="media-body">
-                    <h2 class="mb-md-4"><strong>Exposure:<br></strong>Bright light</h2>
-                  </div>
+    <footer class="footer footer-big footer-color-black" data-color="black">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-3">
+                    <div class="info">
+                        <h5 class="title">Company</h5>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">About Us</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-                <div class="media">
-                  <h2><i class="fas fa-thermometer-half fa-2x"></i></h2>
-                  <div class="media-body">
-                    <h2 class="mb-md-4"><strong>Temperature:<br></strong>Between 18°C and 25°C</h2>
-                  </div>
+                <div class="col-md-3 col-md-offset-1 col-sm-3">
+                    <div class="info">
+                        <h5 class="title"> Help</h5>
+                         <nav>
+                            <ul>
+                                <li>
+                                    <a data-toggle="modal" data-target="#callus" >Contact Us</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-                <div class="media">
-                  <h2><i class="fas fa-tint fa-2x"></i></h2>
-                  <div class="media-body">
-                    <h2 class="mb-md-4"><strong>Watering:<br></strong>2-3 times a week in summer, 1-2 times a week in winter</h2>
-                  </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="info">
+                        <h5 class="title">Latest News</h5>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i> Notice 1
+                                        <hr class="hr-small">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i> Notice 2
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-                <div class="media">
-                  <h2><i class="fas fa-mountain fa-2x"></i></h2>
-                  <div class="media-body">
-                    <h2 class="mb-md-4"><strong>Soil:<br></strong>Well-drained, sandy loam</h2>
-                  </div>
+                <div class="col-md-2 col-md-offset-1 col-sm-3">
+                    <div class="info">
+                        <h5 class="title">Follow us on</h5>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-facebook btn-simple">
+                                        <i class="fa fa-facebook-square"></i> Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-twitter btn-simple">
+                                        <i class="fa fa-twitter"></i> Twitter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-social btn-reddit btn-simple">
+                                        <i class="fa fa-google-plus-square"></i> Google+
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
+            <hr>
+            <div class="copyright">
+                 © <script> document.write(new Date().getFullYear()) </script>Maximiliano Sorribas
+            </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Section 6 -->
-    <div class="section section6">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="h-100 d-flex justify-content-center align-items-center">
-              <div class="d-inline-block mb-3 mb-md-0">
-                <h2 class="mb-md-4"><em class="display-4"><u>Chlorophytum comosum</u></em></h2>
-                <div class="media">
-                    <h2><i class="fas fa-sun fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Exposure:<br></strong>Very well-lit</h2>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <h2><i class="fas fa-thermometer-half fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Temperature:<br></strong>Between 10°C and 22°C</h2>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <h2><i class="fas fa-tint fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Watering:<br></strong>2 times a week in summer, every 10 days in winter</h2>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <h2><i class="fas fa-mountain fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Soil:<br></strong>Ordinary</h2>
-                    </div>
-                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="h-100 d-flex justify-content-start align-items-center">
-              <img class="img-fluid" src="img/chlorophytum.jpg" alt="Chlorophytum comosum">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Section 7 -->
-    <div class="section section7">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="h-100 d-flex justify-content-end align-items-center">
-              <img class="img-fluid" src="img/saintpaulia.jpg" alt="Saintpaulia">
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="h-100 d-flex justify-content-center align-items-center pr-5">
-              <div class="d-inline-block mt-3 mt-md-0">
-                <h2 class="mb-md-4"><em class="display-4"><u>Saintpaulia</u></em></h2>
-                <div class="media">
-                    <h2><i class="fas fa-sun fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Exposure:<br></strong>Light shade</h2>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <h2><i class="fas fa-thermometer-half fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Temperature:<br></strong>Between 15°C and 22°C</h2>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <h2><i class="fas fa-tint fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Watering:<br></strong>Once a week</h2>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <h2><i class="fas fa-mountain fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Soil:<br></strong>Well-drained mixture of loam and compost</h2>
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Section 8 -->
-    <div class="section section8">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="h-100 d-flex justify-content-center align-items-center">
-              <div class="d-inline-block mb-3 mb-md-0">
-                <h2 class="mb-md-4"><em class="display-4"><u>Plectranthus scutellarioides</u></em></h2>
-                <div class="media">
-                    <h2><i class="fas fa-sun fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Exposure:<br></strong>Bright light or part shade</h2>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <h2><i class="fas fa-thermometer-half fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Temperature:<br></strong>Between 18°C and 25°C</h2>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <h2><i class="fas fa-tint fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Watering:<br></strong>2-3 times a week in summer, 1-2 times a week in winter</h2>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <h2><i class="fas fa-mountain fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Soil:<br></strong>Rich in organic matter</h2>
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="h-100 d-flex justify-content-start align-items-center">
-              <img class="img-fluid" src="img/plectranthus.jpg" alt="Plectranthus scutellarioides">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Section 9 -->
-    <div class="section section9">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="h-100 d-flex justify-content-end align-items-center">
-              <img class="img-fluid" src="img/codiaeum.jpg" alt="Codiaeum variegatum">
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="h-100 d-flex justify-content-center align-items-center pr-5">
-              <div class="d-inline-block mt-3 mt-md-0">
-                <h2 class="mb-md-4"><em class="display-4"><u>Codiaeum variegatum</u></em></h2>
-                <div class="media">
-                    <h2><i class="fas fa-sun fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Exposure:<br></strong>Bright light or part shade</h2>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <h2><i class="fas fa-thermometer-half fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Temperature:<br></strong>Between 16°C and 22°C</h2>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <h2><i class="fas fa-tint fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Watering:<br></strong>1-2 times a week</h2>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <h2><i class="fas fa-mountain fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Soil:<br></strong>Ordinary</h2>
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Section 10 -->
-    <div class="section section10">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="h-100 d-flex justify-content-center align-items-center">
-              <div class="d-inline-block mb-3 mb-md-0">
-                <h2 class="mb-md-4"><em class="display-4"><u>Chamaecereus silvestrii</u></em></h2>
-                <div class="media">
-                    <h2><i class="fas fa-sun fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Exposure:<br></strong>Direct sunlight</h2>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <h2><i class="fas fa-thermometer-half fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Temperature:<br></strong>Between 18°C and 25°C in summer, between 2°C and 10°C in winter</h2>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <h2><i class="fas fa-tint fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Watering:<br></strong>Once every 2 weeks in summer, no water in winter</h2>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <h2><i class="fas fa-mountain fa-2x"></i></h2>
-                    <div class="media-body">
-                      <h2 class="mb-md-4"><strong>Soil:<br></strong>Well-drained, sandy soil</h2>
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="h-100 d-flex justify-content-start align-items-center">
-              <img class="img-fluid" src="img/chamaecereus.jpg" alt="Chamaecereus silvestrii">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <!-- build:js js/main.js -->
-  <script src="node_modules/pagepiling.js/dist/jquery.pagepiling.js"></script>
-  <script src="js/scripts.js"></script>
-  <!-- endbuild -->
+    </footer>
 
 </body>
+
+<script src="node_modules/jquery/dist/jquery.js" type="text/javascript"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="js/modernizr.js"></script>
+
+<script type="text/javascript" src="js/scripts.js"></script>
+
 </html>
